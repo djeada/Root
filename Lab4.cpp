@@ -28,12 +28,6 @@ int Lab4(){
 
 	fun1->SetParameter(0,paramA);
 
-	TCanvas*c = new TCanvas("c","Zadanie 4", 800, 600);
-	c->Divide(2,2);
-	
-	c->cd(1); // przechodzimy do pierwszego padu
-	fun1->Draw("SURF1");
-
 	//sampling
 	double x, y;
 
@@ -67,16 +61,16 @@ int Lab4(){
 	h3->Sumw2();
 	TH1D* hx3 = h3->ProjectionX();
 
-	TCanvas*c2 = new TCanvas("c2","Zadanie 4", 800, 600);
-	c2->Divide(2,2);
+	TCanvas*c1 = new TCanvas("c1","Zadanie 4", 800, 600);
+	c1->Divide(2,2);
 	
-	c2->cd(1);
+	c1->cd(1);
 	hx1->Draw("Ep");
 
-	c2->cd(2); 
+	c1->cd(2); 
 	hx2->Draw("Ep");
 
-	c2->cd(3); 
+	c1->cd(3); 
 	hx3->Draw("Ep");
 
 	//scalling
@@ -85,7 +79,6 @@ int Lab4(){
 	double paramB = 1/integralValueH1;
 	h1->Scale(paramB);
 
-
 	double integralValueH2 = h2->Integral(xmin,xmax,ymin,ymax, "width");
 	double paramC = 1/integralValueH2;
 	h2->Scale(paramC);
@@ -93,8 +86,6 @@ int Lab4(){
 	double integralValueH3 = h3->Integral(xmin,xmax,ymin,ymax, "width");
 	double paramD = 1/integralValueH3;
 	h3->Scale(paramD);
-
-
 
 	cout << "Wartosc oczekiwana H1: \n E(x): " << h1->GetMean(1) << " E(y): " << h1->GetMean(2) << endl;
 	cout << "Wartosc oczekiwana H2: \n E(x): " << h2->GetMean(1) << " E(y): " << h2->GetMean(2) << endl;
@@ -121,13 +112,19 @@ int Lab4(){
 	cout << "Korelacja H2: \n ro(x): " << h2->GetCorrelationFactor() << endl;
 	cout << "Korelacja H3: \n ro(x): " << h3->GetCorrelationFactor() <<  endl;
 
-	c->cd(2);
+	TCanvas*c2 = new TCanvas("c2","Zadanie 4", 800, 600);
+	c2->Divide(2,2);
+	
+	c2->cd(1); // przechodzimy do pierwszego padu
+	fun1->Draw("SURF1");
+	
+	c2->cd(2);
 	h1->Draw("LEGO2");
 
-	c->cd(3);
+	c2->cd(3);
 	h2->Draw("LEGO2");
 
-	c->cd(4);
+	c2->cd(4);
 	h3->Draw("LEGO2");
 
 	return 0;
