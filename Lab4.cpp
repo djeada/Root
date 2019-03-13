@@ -87,30 +87,30 @@ int Lab4(){
 	double paramD = 1/integralValueH3;
 	h3->Scale(paramD);
 
-	cout << "Wartosc oczekiwana H1: \n E(x): " << h1->GetMean(1) << " E(y): " << h1->GetMean(2) << endl;
-	cout << "Wartosc oczekiwana H2: \n E(x): " << h2->GetMean(1) << " E(y): " << h2->GetMean(2) << endl;
-	cout << "Wartosc oczekiwana H3: \n E(x): " << h3->GetMean(1) << " E(y): " << h3->GetMean(2) << endl;
+	cout << "Expected Value H1: \n E(x): " << h1->GetMean(1) << " E(y): " << h1->GetMean(2) << endl;
+	cout << "Expected Value H2: \n E(x): " << h2->GetMean(1) << " E(y): " << h2->GetMean(2) << endl;
+	cout << "Expected Value H3: \n E(x): " << h3->GetMean(1) << " E(y): " << h3->GetMean(2) << endl;
 
 	cout << endl;
 	cout << endl;
 
-	cout << "Odchylenie standardowe H1: \n sigma(x): " << h1->GetRMS(1) << " sigma(y): " << h1->GetRMS(2) << endl;
-	cout << "Odchylenie standardowe H2: \n sigma(x): " << h2->GetRMS(1) << " sigma(y): " << h2->GetRMS(2) << endl;
-	cout << "Odchylenie standardowe H3: \n sigma(x): " << h3->GetRMS(1) << " sigma(y): " << h3->GetRMS(2) << endl;
+	cout << "Standard Deviation H1: \n sigma(x): " << h1->GetRMS(1) << " sigma(y): " << h1->GetRMS(2) << endl;
+	cout << "Standard Deviation H2: \n sigma(x): " << h2->GetRMS(1) << " sigma(y): " << h2->GetRMS(2) << endl;
+	cout << "Standard Deviation H3: \n sigma(x): " << h3->GetRMS(1) << " sigma(y): " << h3->GetRMS(2) << endl;
 
 	cout << endl;	
 	cout << endl;
 
-	cout << "Kowariancja H1: \n cov(x, y): " << h1->GetCovariance() << endl;
-	cout << "Kowariancja H2: \n cov(x, y): " << h2->GetCovariance() << endl;
-	cout << "Kowariancja H3: \n cov(x, y): " << h3->GetCovariance() << endl;
+	cout << "Covariance H1: \n cov(x, y): " << h1->GetCovariance() << endl;
+	cout << "Covariance H2: \n cov(x, y): " << h2->GetCovariance() << endl;
+	cout << "Covariance H3: \n cov(x, y): " << h3->GetCovariance() << endl;
 
 	cout << endl;	
 	cout << endl;
 
-	cout << "Korelacja H1: \n ro(x, y): " << h1->GetCorrelationFactor() <<  endl;
-	cout << "Korelacja H2: \n ro(x, y): " << h2->GetCorrelationFactor() << endl;
-	cout << "Korelacja H3: \n ro(x, y): " << h3->GetCorrelationFactor() <<  endl;
+	cout << "Correlation Factor H1: \n ro(x, y): " << h1->GetCorrelationFactor() <<  endl;
+	cout << "Correlation Factor H2: \n ro(x, y): " << h2->GetCorrelationFactor() << endl;
+	cout << "Correlation Factor H3: \n ro(x, y): " << h3->GetCorrelationFactor() <<  endl;
 
 	TCanvas*c2 = new TCanvas("c2","Zadanie 4", 800, 600);
 	c2->Divide(2,2);
