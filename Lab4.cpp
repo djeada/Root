@@ -101,16 +101,16 @@ int Lab4(){
 	cout << endl;	
 	cout << endl;
 
-	cout << "Kowariancja H1: \n cov(x): " << h1->GetCovariance() << endl;
-	cout << "Kowariancja H2: \n cov(x): " << h2->GetCovariance() << endl;
-	cout << "Kowariancja H3: \n cov(x): " << h3->GetCovariance() << endl;
+	cout << "Kowariancja H1: \n cov(x, y): " << h1->GetCovariance() << endl;
+	cout << "Kowariancja H2: \n cov(x, y): " << h2->GetCovariance() << endl;
+	cout << "Kowariancja H3: \n cov(x, y): " << h3->GetCovariance() << endl;
 
 	cout << endl;	
 	cout << endl;
 
-	cout << "Korelacja H1: \n ro(x): " << h1->GetCorrelationFactor() <<  endl;
-	cout << "Korelacja H2: \n ro(x): " << h2->GetCorrelationFactor() << endl;
-	cout << "Korelacja H3: \n ro(x): " << h3->GetCorrelationFactor() <<  endl;
+	cout << "Korelacja H1: \n ro(x, y): " << h1->GetCorrelationFactor() <<  endl;
+	cout << "Korelacja H2: \n ro(x, y): " << h2->GetCorrelationFactor() << endl;
+	cout << "Korelacja H3: \n ro(x, y): " << h3->GetCorrelationFactor() <<  endl;
 
 	TCanvas*c2 = new TCanvas("c2","Zadanie 4", 800, 600);
 	c2->Divide(2,2);
